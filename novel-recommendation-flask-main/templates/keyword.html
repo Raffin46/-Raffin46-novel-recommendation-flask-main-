@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "includes/header.html" %}
+  <body>
+    <nav class="navbar bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="/">Rekomendasi Novel</a>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="card bg-light">
+            <div class="card-body">
+              <div class="row">
+                {% if recommendation %}
+                <h2 class="mt-5 text-center">
+                  Rekomendasi Novel {{ keyword }}
+                </h2>
+                <div class="mt-3">{{ recommendation|safe }}</div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <a href="/" class="btn btn-primary mt-3 mb-4">Kembali ke Awal</a>
+        </div>
+      </div>
+    </div>
+
+    {% include "includes/footer.html" %}
+  </body>
+</html>
